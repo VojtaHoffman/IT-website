@@ -1,21 +1,20 @@
 //-------------------
 // GLOBAL variables
 //-------------------
-
 let model;
 
-const canvasWidth = 150;
-const canvasHeight = 150;
-const canvasStrokeStyle = "white";
-const canvasLineJoin = "round";
-const canvasLineWidth = 10;
-const canvasBackgroundColor = "black";
-const canvasId = "canvas";
+var canvasWidth           	= 150;
+var canvasHeight 			= 150;
+var canvasStrokeStyle		= "white";
+var canvasLineJoin			= "round";
+var canvasLineWidth       	= 10;
+var canvasBackgroundColor 	= "black";
+var canvasId              	= "canvas";
 
-const clickX = [];
-const clickY = [];
-const clickD = [];
-let drawing;
+var clickX = new Array();
+var clickY = new Array();
+var clickD = new Array();
+var drawing;
 
 document.getElementById('chart_box').innerHTML = "";
 document.getElementById('chart_box').style.display = "none";
@@ -23,86 +22,84 @@ document.getElementById('chart_box').style.display = "none";
 //---------------
 // Create canvas
 //---------------
-
-const canvasBox = document.getElementById('canvas_box');
-const canvas = document.createElement("canvas");
+var canvasBox = document.getElementById('canvas_box');
+var canvas    = document.createElement("canvas");
 
 canvas.setAttribute("width", canvasWidth);
 canvas.setAttribute("height", canvasHeight);
 canvas.setAttribute("id", canvasId);
 canvas.style.backgroundColor = canvasBackgroundColor;
 canvasBox.appendChild(canvas);
-
-if (typeof G_vmlCanvasManager != 'undefined') {
+if(typeof G_vmlCanvasManager != 'undefined') {
   canvas = G_vmlCanvasManager.initElement(canvas);
 }
 
-const ctx = canvas.getContext("2d");
+ctx = canvas.getContext("2d");
 
 
 //---------------------
 // MOUSE DOWN function
 //---------------------
-
 $("#canvas").mousedown(function(e) {
-	const rect = canvas.getBoundingClientRect();
-	const mouseX = e.clientX - rect.left;
-	const mouseY = e.clientY - rect.top;
+	var rect = canvas.getBoundingClientRect();
+	var mouseX = e.clientX- rect.left;;
+	var mouseY = e.clientY- rect.top;
 	drawing = true;
 	addUserGesture(mouseX, mouseY);
 	drawOnCanvas();
-  });
+});
 
 //-----------------------
 // TOUCH START function
 //-----------------------
-
 canvas.addEventListener("touchstart", function (e) {
 	if (e.target == canvas) {
-	  e.preventDefault();
-	}
-  
-	const rect = canvas.getBoundingClientRect();
-	const touch = e.touches[0];
-  
-	const mouseX = touch.clientX - rect.left;
-	const mouseY = touch.clientY - rect.top;
-  
+    	e.preventDefault();
+  	}
+
+	var rect = canvas.getBoundingClientRect();
+	var touch = e.touches[0];
+
+	var mouseX = touch.clientX - rect.left;
+	var mouseY = touch.clientY - rect.top;
+
 	drawing = true;
 	addUserGesture(mouseX, mouseY);
 	drawOnCanvas();
-  
-  }, false);
+
+}, false);
 
 //---------------------
 // MOUSE MOVE function
 //---------------------
 $("#canvas").mousemove(function(e) {
-	if (drawing) {
-	  const rect = canvas.getBoundingClientRect();
-	  const mouseX = e.clientX - rect.left;
-	  const mouseY = e.clientY - rect.top;
-	  addUserGesture(mouseX, mouseY, true);
-	  drawOnCanvas();
+	if(drawing) {
+		var rect = canvas.getBoundingClientRect();
+		var mouseX = e.clientX- rect.left;;
+		var mouseY = e.clientY- rect.top;
+		addUserGesture(mouseX, mouseY, true);
+		drawOnCanvas();
 	}
-  });
+});
 
 //---------------------
 // TOUCH MOVE function
 //---------------------
-canvas.addEventListener("touchmove", function(e) {
+canvas.addEventListener("touchmove", function (e) {
 	if (e.target == canvas) {
-	  e.preventDefault();
+    	e.preventDefault();
+  	}
+	if(drawing) {
+		var rect = canvas.getBoundingClientRect();
+		var touch = e.touches[0];
+
+		var mouseX = touch.clientX - rect.left;
+		var mouseY = touch.clientY - rect.top;
+
+		addUserGesture(mouseX, mouseY, true);
+		drawOnCanvas();
 	}
-	if (drawing) {
-	  const rect = canvas.getBoundingClientRect();
-	  const touch = e.touches[0];
-	  const mouseX = touch.clientX - rect.left;
-	  const mouseY = touch.clientY - rect.top;
-	  addUserGesture(mouseX, mouseY, true);
-	  drawOnCanvas();
-	}
-  }, false);
+}, false);
 
 //-------------------
 // MOUSE UP function
