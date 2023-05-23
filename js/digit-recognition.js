@@ -8,7 +8,7 @@ var canvasWidth           	= 300;
 var canvasHeight 			= 300;
 var canvasStrokeStyle		= "white";
 var canvasLineJoin			= "round";
-var canvasLineWidth       	= 20;
+var canvasLineWidth       	= 25;
 var canvasBackgroundColor 	= "black";
 var canvasId              	= "canvas";
 
