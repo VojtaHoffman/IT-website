@@ -16,6 +16,7 @@ The application requires the following dependencies:
 * Chart.js 2.9.4
 * TensorFlow.js 3.0.0
 * Bootstrap 4.3.1
+
 These dependencies are included in the js and style directories of the project.
 
 ## Acknowledgments
