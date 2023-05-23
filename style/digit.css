@@ -62,7 +62,7 @@ h3{
 
 .btn{
   width: 150px;
-    margin-left: 30px; ;
+    margin-left: 20px;
 }
 
 .coding {
@@ -83,17 +83,8 @@ h3{
 }
 canvas{
     border-radius: 10px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
-.prediction-text{
-    margin-left: 30px;
-}
-.col-md-7{
-    height: 300px;
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-}
-.chart{
-    height: 100%;
+
+.col-6{
 }

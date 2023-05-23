@@ -2,6 +2,7 @@
 // GLOBAL variables
 //-------------------
 let model;
+let chartos = document.getElementById('chart_box');
 
 var canvasWidth           	= 300;
 var canvasHeight 			= 300;
@@ -293,6 +294,6 @@ function displayLabel(data) {
             max = data[i];
         }
     }
-	$(".prediction-text").html("Predicting you draw <b>"+maxIndex+"</b> with <b>"+Math.trunc( max*100 )+"%</b> confidence")
+	$(".prediction-text").html("Predicting you draw the number <b>"+maxIndex+"</b> with <b>"+Math.trunc( max*100 )+"%</b> confidence")
 }
 
