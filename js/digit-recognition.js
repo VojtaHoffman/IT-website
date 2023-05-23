@@ -3,11 +3,11 @@
 //-------------------
 let model;
 
-var canvasWidth           	= 150;
-var canvasHeight 			= 150;
+var canvasWidth           	= 300;
+var canvasHeight 			= 300;
 var canvasStrokeStyle		= "white";
 var canvasLineJoin			= "round";
-var canvasLineWidth       	= 10;
+var canvasLineWidth       	= 20;
 var canvasBackgroundColor 	= "black";
 var canvasId              	= "canvas";
 
@@ -187,10 +187,10 @@ async function loadModel() {
 
   // clear the model variable
   model = undefined;
-  
+
   // load the model using a HTTPS request (where you have stored your model files)
   model = await tf.loadLayersModel("models/model.json");
-  
+
   console.log("model loaded..");
 }
 
@@ -212,7 +212,7 @@ function preprocessCanvas(image) {
 }
 
 //--------------------------------------------
-// predict function 
+// predict function
 //--------------------------------------------
 $("#predict-button").click(async function () {
     // get image data from canvas
@@ -251,8 +251,8 @@ function loadChart(label, data, modelSelected) {
 	        labels: label,
 	        datasets: [{
 	            label: modelSelected + " prediction",
-	            backgroundColor: '#f50057',
-	            borderColor: 'rgb(255, 99, 132)',
+	            backgroundColor: 'black',
+	            borderColor: 'black',
 	            data: data,
 	        }]
 	    },
