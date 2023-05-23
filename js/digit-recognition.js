@@ -258,7 +258,9 @@ function loadChart(label, data, modelSelected) {
 	    },
 
 	    // Configuration options go here
-	    options: {}
+	    options: {
+				    	responsive: true,
+		}
 	});
 }
 
