@@ -2,7 +2,7 @@
 PreDigit is a web application that allows users to draw digits on a canvas and have them recognized by a machine learning model. The application uses TensorFlow.js to load and run the model, which was trained on the MNIST dataset of handwritten digits.
 
 ## Getting Started
-To run the application, simply open the index.html file in a web browser. The application should load and display a canvas element for the user to draw on.
+To run the application, simply open the deployment in a web browser. The application should load and display a canvas element for the user to draw on.
 
 ## Usage
 To use the application, follow these steps:
