@@ -38,4 +38,4 @@ PreDigit was built using a combination of HTML, CSS, and JavaScript, along with 
 PreDigit was created by Vojtěch Hoffman. The AI model was trained using the MNIST dataset. The bar chart was created using Chart.js. The web application was built using HTML, CSS, JavaScript, and the Bootstrap framework. Special thanks to the developers of the third-party libraries and frameworks used in the project.
 
 ## License
-  PreDigit is licensed under the MIT License. See the [LICENSE](/LICENSE.md) file for more information.
+  PreDigit is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
