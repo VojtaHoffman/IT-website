@@ -1,26 +1,38 @@
 # PreDigit
-PreDigit is a web application that allows users to draw digits on a canvas and have them recognized by a machine learning model. The application uses TensorFlow.js to load and run the model, which was trained on the MNIST dataset of handwritten digits.
+PreDigit is a web application that allows users to draw a digit and have it recognized by an AI model. It uses TensorFlow.js to train and run the model, and Chart.js to display the prediction probabilities as a bar chart.
 
 ## Getting Started
-To run the application, simply open the deployment in a web browser. The application should load and display a canvas element for the user to draw on.
+To get started with PreDigit, simply clone this repository to your local machine and open the index.html file in a web browser. The application should work on most modern browsers, including Chrome, Firefox, and Safari.
+
+## Prerequisites
+PreDigit requires the following dependencies:
+* jQuery (v3.3.1 or later)
+* Chart.js (v2.9.4 or later)
+* TensorFlow.js (v2.8.0 or later)
+* Bootstrap (v4.3.1 or later)
+
+*These dependencies are included in the index.html file via CDN links, so an internet connection is required to use PreDigit.*
+
+## Installation
+To install PreDigit, simply clone this repository to your local machine:
+
+`git clone https://github.com/VojtaHoffman/PreDigit.git`
+
+Then, open the index.html file in a web browser to use the application.
 
 ## Usage
-To use the application, follow these steps:
-1. Draw a digit on the canvas using your mouse or touch screen.
-2. Click the "Recognize" button to have the model predict the digit.
-3. The predicted digit and the model's confidence score for each digit will be displayed in a bar chart.
+To use PreDigit, simply draw a digit on the canvas area using your mouse or touchpad. To clear the canvas, click the "Clear" button. To predict the digit, click the "Predict" button. The predicted digit and the prediction probabilities will be displayed in the result area.
 
-## Dependencies
-The application requires the following dependencies:
-* jQuery 3.3.1
-* Chart.js 2.9.4
-* TensorFlow.js 3.0.0
-* Bootstrap 4.3.1
+## Built With
+PreDigit was built using a combination of HTML, CSS, and JavaScript, along with several third-party libraries and frameworks. The following is a list of the main technologies used in the project:
 
-These dependencies are included in the js and style directories of the project.
+* HTML: The markup language used to structure the web page.
+* CSS: The styling language used to add visual design to the web page.
+* JavaScript: The programming language used to add interactivity and functionality to the web page.
+* Bootstrap: A popular CSS framework used to create responsive and mobile-first web pages.
+* jQuery: A JavaScript library used to simplify DOM manipulation and event handling.
+* Chart.js: A JavaScript library used to create interactive and customizable charts and graphs.
+* TensorFlow.js: A JavaScript library used to train and run machine learning models in the browser.
 
 ## Acknowledgments
-This project was inspired by the TensorFlow.js MNIST demo and the following resources:
-* [TensorFlow.js: Machine Learning for the Web and Beyond](https://www.tensorflow.org/js)
-* [Getting Started with TensorFlow.js](https://www.tensorflow.org/js/tutorials)
-* [Building a Handwritten Digits Recognizer in JavaScript with TensorFlow.js](https://codelabs.developers.google.com/codelabs/tfjs-training-classfication#0)
+PreDigit was created by Vojtěch Hoffman. The AI model was trained using the MNIST dataset. The bar chart was created using Chart.js. The web application was built using HTML, CSS, JavaScript, and the Bootstrap framework. Special thanks to the developers of the third-party libraries and frameworks used in the project.
